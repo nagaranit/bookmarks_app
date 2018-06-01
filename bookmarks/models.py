@@ -13,8 +13,7 @@ class Bookmark(models.Model):
     user  = models.ForeignKey(User , on_delete=models.CASCADE)
     link  = models.ForeignKey(Link , on_delete=models.CASCADE)
 
-
-    def _str_(self):
+    def __str__(self):
         return '''title: {0}, user:{1}, link: {2}'''.format(self.title,
                                                      self.user,
                                                      self.link )
